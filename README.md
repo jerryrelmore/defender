@@ -30,14 +30,19 @@ sudo apt install build-essential bison wine python3
 
 ### Build the assembler toolchain
 
-We use [`asm6809`](https://www.6809.org.uk/asm6809/) to assembler the source code for the main game and [`vasm`](http://www.compilers.de/vasm.html) to compile
+We use [`asm6809`](https://www.6809.org.uk/asm6809/) to assemble the source code for the main game and [`vasm`](http://www.compilers.de/vasm.html) to compile
 the sound module. 
 
 First you must run the following to set up the git submodules containing the assembler toolchain:
 ```sh
 cd defender
-git clone https://www.6809.org.uk/git/asm6809.git/
 git clone https://github.com/jerryrelmore/vasm-mirror.git
+```
+Download asm6809 source files here: https://www.6809.org.uk/asm6809/dl/asm6809-2.12.tar.gz
+```sh
+wget https://www.6809.org.uk/asm6809/dl/asm6809-2.12.tar.gz
+tar xvf asm6809-2.12.tar.gz
+mv asm6809-2.12 asm6809
 ```
 
 Now you can build the toolchain, as follows:
