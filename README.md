@@ -47,8 +47,7 @@ cd asm6809
 ./autogen.sh
 ./configure
 make 
-cd ..
-cd vasm-mirror
+cd ../vasm-mirror
 make CPU=6800 SYNTAX=oldstyle
 cd ..
 ```
