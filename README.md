@@ -23,9 +23,9 @@ to play the game in an emulator such as [MAME](https://www.mamedev.org/release.h
 <!-- vim-markdown-toc -->
 ## Build Instructions
 
-### Build Requirements
+### Build Requirements for Ubuntu 20.04
 ```sh
-sudo apt install build-essentials wine python3
+sudo apt install build-essential bison wine python3
 ```
 
 ### Build the assembler toolchain
@@ -34,10 +34,10 @@ We use [`asm6809`](https://www.6809.org.uk/asm6809/) to assembler the source cod
 the sound module. 
 
 First you must run the following to set up the git submodules containing the assembler toolchain:
-
 ```sh
-git submodule init
-git submodule update
+cd defender
+git clone https://www.6809.org.uk/git/asm6809.git/
+git clone https://github.com/jerryrelmore/vasm-mirror.git
 ```
 
 Now you can build the toolchain, as follows:
