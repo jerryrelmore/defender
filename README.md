@@ -49,7 +49,6 @@ Now you can build the toolchain, as follows:
 
 ```sh
 cd asm6809
-./autogen.sh
 ./configure
 make 
 cd ../vasm-mirror
